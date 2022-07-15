@@ -1,0 +1,15 @@
+name: ininja
+recipe: laravel
+config:
+  php: 7.4
+  webroot: public
+  services:
+    node:
+      type: node
+      build:
+        - npm install
+tooling:
+  node:
+    service: node
+  npm:
+    service: node

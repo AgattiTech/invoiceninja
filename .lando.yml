@@ -3,11 +3,15 @@ recipe: laravel
 config:
   php: 7.4
   webroot: public
-  services:
-    node:
-      type: node
-      build:
-        - npm install
+services:
+  appserver:
+    xdebug: true
+    config:
+      php: .vscode/php.ini
+  node:
+    type: node
+    build:
+      - npm install
 tooling:
   node:
     service: node
